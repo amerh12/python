@@ -1,0 +1,35 @@
+import random
+
+scorePc=0
+scoreUser=0
+
+for i in range(3):
+  my_list = ["papir", "kamen", "makaze"]
+  x=random.choice(my_list)
+  y=input("Unesi papir, kamen ili makaze:").lower()
+  
+  if x==y:
+    print("Nereseno izabrao si", y, "a racunar je izabrao", x)
+  elif x=="papir" and y=="kamen":
+    print(f"Izgubio si izabrao si {y} a računar je izabrao {x}")
+    scorePc+=1
+  elif x=="papir" and y=="makaze":
+    print(f"Pobedio si izabrao si {y} a računar je izabrao {x}")
+    scoreUser+=1
+  elif x== "kamen" and y=="papir":
+    print(f"Pobedio si izabrao si {y} a računar je izabrao {x}")
+    scoreUser+=1
+  elif x== "kamen" and y=="makaze":
+    print(f"Izgubio si izabrao si {y} a računar je izabrao {x}")
+    scorePc+=1
+  elif x== "makaze" and y=="papir":
+    print(f"Izgubio si izabrao si {y} a računar je izabrao {x}")
+    scorePc+=1
+  elif x== "makaze" and y=="kamen":
+    print(f"Pobedio si izabrao si {y} a računar je izabrao {x}")
+    scoreUser+=1
+
+print()
+print("------------------------------------------------------------")
+print(f"                      RACUNAR {scorePc} : {scoreUser} IGRAC")
+print("------------------------------------------------------------")
